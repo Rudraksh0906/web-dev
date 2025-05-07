@@ -1,0 +1,267 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #8D3B3B, #D9A23F); /* Dual-tone gradient */
+    min-height: 100vh; /* Ensures full-page coverage */
+    color: #FAF3E0; /* Warm beige for better readability */
+}
+
+/* Header & Navbar Alignment */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #8D3B3B, #D9A23F);
+    padding: 15px 40px;
+    color: white;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: #F3E5AB; /* Soft gold */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background: #E07A5F;
+    border-radius: 5px;
+}
+
+/* Functional button on right */
+.btn-nav {
+    background: #8D3B3B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background: #E07A5F;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    background: #E1C699; /* Muted sand color */
+    color: #3F292B;
+}
+
+/* Products Section */
+.products, .contact-form, .about {
+    background: linear-gradient(to bottom, #D9A23F, #FAE0A4);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    background: #FAE0A4;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Images */
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-nav {
+        margin-top: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .hero h2 {
+        text-align: center;
+    }
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    background: #E1C699; /* Muted sand color */
+    color: #3F292B;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #D9A23F; /* Gold ochre */
+    margin-bottom: 15px;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.6;
+}
+.custom-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #D9A23F; /* Gold ochre matching theme */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Full-sized background box */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Full-screen height */
+    background: linear-gradient(to bottom, #D9A23F, #FAE0A4);
+    padding: 60px;
+}
+
+/* Inner contact box with larger sizing */
+.contact-box {
+    background:rgb(250, 224, 164); /* Dark background to contrast */
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    width: 60%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Input Fields */
+.contact-form label {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #FAE0A4;
+    margin-bottom: 20px;
+}
+
+/* Submit Button */
+.contact-form button {
+    background: linear-gradient(to bottom, #D9A23F, #FAE0A4);;
+    color: #8D3B3B;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #E07A5F;
+    color: rgb(250, 224, 164);
+}
+/* About Us Section - Full-Size Box */
+#about {
+    width: 100%; 
+    padding: 60px 40px; 
+    background: rgb(250, 224, 164)
+    text-align: justify;
+    border-radius: 0;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* About Us Headings */
+#about h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
